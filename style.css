@@ -12,6 +12,28 @@
     --success-green: #10B981;
 }
 
+#stDownloadButton {
+    background-color: #172033 !important;
+}
+
+#tabs-bui3-tab-1 {
+    background-color: #00050b !important;
+    color: #0266fb !important;
+    border: #0266fb !important;
+}
+
+#tabs-bui3-tab-0 {
+    background-color: #00060e !important;
+    color: #0266fb !important;
+    border: #0266fb !important;
+}
+
+#tabs-bui3-tab-2 {
+    background-color: #000610 !important;
+    color: #0266fb !important;
+    border: #0266fb !important;
+}
+
 /* App Canvas styling */
 .stApp {
     background-color: var(--bg-color) !important;
