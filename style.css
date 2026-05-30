@@ -234,7 +234,7 @@ div[data-testid="stFormSubmitButton"] > button:hover {
 }
 
 /* ----------------- MODERN TAB BARS & PILLS ----------------- */
-div[data-testid="stTabBar"] {
+div[data-testid="stTabBar"], [data-baseweb="tabs"] {
     background: rgba(14, 20, 32, 0.3) !important;
     border: 1px solid rgba(255, 255, 255, 0.05) !important;
     border-radius: 10px !important;
@@ -245,7 +245,10 @@ div[data-testid="stTabBar"] {
 /* Tab button text state - Pure highlegible white */
 div[data-testid="stTabBar"] button,
 div[data-testid="stTabBar"] button p,
-div[data-testid="stTabBar"] button span {
+div[data-testid="stTabBar"] button span,
+button[data-baseweb="tab"],
+button[data-baseweb="tab"] p,
+button[data-baseweb="tab"] span {
     color: var(--text-primary) !important;
     font-family: 'Outfit', sans-serif !important;
     font-weight: 600 !important;
@@ -254,7 +257,8 @@ div[data-testid="stTabBar"] button span {
 }
 
 /* Tab Active states */
-div[data-testid="stTabBar"] button[aria-selected="true"] {
+div[data-testid="stTabBar"] button[aria-selected="true"],
+button[data-baseweb="tab"][aria-selected="true"] {
     background-color: rgba(255, 255, 255, 0.05) !important;
     border-bottom: 2px solid var(--accent-cyber) !important;
     border-radius: 6px !important;
