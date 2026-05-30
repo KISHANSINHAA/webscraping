@@ -1,0 +1,311 @@
+/* Import Professional Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Design Tokens matching professional requirements */
+:root {
+    --bg-color: #080B11;
+    --card-bg: #131A26;
+    --border-glass: rgba(255, 255, 255, 0.05);
+    --accent-blue: #3B82F6;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --success-green: #10B981;
+}
+
+/* App Canvas styling */
+.stApp {
+    background-color: var(--bg-color) !important;
+    font-family: 'Inter', sans-serif !important;
+    color: var(--text-primary);
+}
+
+/* Hide Streamlit Sidebar completely */
+[data-testid="sidebar-content"] {
+    display: none !important;
+}
+
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
+
+/* Title in Blue as requested */
+.portal-header {
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 16px;
+    margin-bottom: 30px;
+}
+
+.portal-title {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 2.3rem !important;
+    font-weight: 700 !important;
+    color: #3B82F6 !important;
+    /* Solid blue title as requested */
+    margin: 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.portal-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin: 4px 0 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+}
+
+/* Clean Enterprise Cards */
+.enterprise-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.enterprise-card:hover {
+    border-color: #334155;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Clean Metrics Layout */
+.metric-container-custom {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: left;
+}
+
+.metric-num-custom {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3B82F6;
+}
+
+.metric-lbl-custom {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+
+/* Text Inputs with high-visibility black background and blue labels as requested */
+div[data-testid="stTextInput"] input,
+div[data-testid="stTextArea"] textarea {
+    background-color: #000000 !important;
+    /* Solid pure black */
+    color: #F8FAFC !important;
+    border: 1.5px solid #3B82F6 !important;
+    /* Clear high contrast blue border */
+    border-radius: 6px !important;
+    padding: 10px !important;
+}
+
+div[data-testid="stTextInput"] label,
+div[data-testid="stTextArea"] label,
+div[data-testid="stTextInput"] label p,
+div[data-testid="stTextArea"] label p {
+    color: #3B82F6 !important;
+    /* Title of text boxes inside is blue */
+    font-weight: 600 !important;
+}
+
+div[data-testid="stTextInput"] input:focus,
+div[data-testid="stTextArea"] textarea:focus {
+    border-color: #2563EB !important;
+    background-color: #000000 !important;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Submit Button - Solid Royal Blue */
+div[data-testid="stFormSubmitButton"]>button {
+    background-color: #2563EB !important;
+    /* Solid blue */
+    color: #FFFFFF !important;
+    /* Visible white text */
+    border: 2px solid #2563EB !important;
+    border-radius: 6px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    padding: 12px 24px !important;
+    width: 100% !important;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2) !important;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+}
+
+div[data-testid="stFormSubmitButton"]>button:hover {
+    background-color: #1D4ED8 !important;
+    border-color: #1D4ED8 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Stepper module stylings */
+.stepper-row {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stepper-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stepper-bullet {
+    width: 8px;
+    height: 8px;
+    background: #3B82F6;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #3B82F6;
+}
+
+.stepper-bullet.success {
+    background: #10B981;
+    box-shadow: 0 0 10px #10B981;
+}
+
+.stepper-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #E2E8F0;
+}
+
+.stepper-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Email Pill Tags */
+.email-tag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #E2E8F0;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Lead Card grid inside Leads Tab */
+.lead-card-box {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 12px;
+}
+
+.lead-card-box:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+}
+
+/* General details view button inside Cards Grid */
+div.stButton>button {
+    background-color: #172033 !important;
+    color: #F8FAFC !important;
+    border: 1px solid #2B3D5C !important;
+    border-radius: 6px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    padding: 8px 14px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+div.stButton>button:hover {
+    background-color: #1E2B45 !important;
+    border-color: #3B82F6 !important;
+}
+
+/* Elegant outreach quote box */
+.outreach-quote-box {
+    background: rgba(37, 99, 235, 0.04);
+    border-left: 3px solid var(--accent-blue);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #E2E8F0;
+    font-style: italic;
+}
+
+.outreach-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+/* Clean Divider */
+.portal-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.06);
+    margin: 20px 0;
+}
+
+/* Footer style */
+.saas-footer {
+    text-align: center;
+    color: #4B5563;
+    font-size: 0.75rem;
+    margin: 40px 0 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding-top: 15px;
+}
+
+#stDownloadButton {
+    background-color: #172033 !important;
+}
+
+#tabs-bui3-tab-1 {
+    background-color: #00050b !important;
+    color: #0266fb !important;
+    border: #0266fb !important;
+}
+
+#tabs-bui3-tab-0 {
+    background-color: #00060e !important;
+    color: #0266fb !important;
+    border: #0266fb !important;
+}
+
+#tabs-bui3-tab-2 {
+    background-color: #000610 !important;
+    color: #0266fb !important;
+    border: #0266fb !important;
+}
