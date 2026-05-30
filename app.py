@@ -174,7 +174,6 @@ with tab1:
                     progress_bar.progress(100)
                     
                     # Display Corporate Portrait Card (Visual intelligence layout matching mockup!)
-                    # favicon_url = f"https://logo.clearbit.com/{profile.get('website_name')}"
                     render_html(f"""
 <div class="enterprise-card" style="padding:24px; box-shadow:0 8px 30px rgba(0,0,0,0.4); margin-bottom:24px;">
 
@@ -190,16 +189,13 @@ with tab1:
 
 <div style="display:flex; gap:20px; flex-wrap:wrap; margin-bottom:10px;">
     
-    <!-- Col 1: Contact Information (with favicon logo box) -->
+    <!-- Col 1: Contact Information -->
     <div style="flex:1; min-width:280px; background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.04); border-radius:8px; padding:18px; position:relative;">
         <div style="display:flex; justify-content:space-between;">
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:6px; width:100%;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span style="font-size:0.9rem; font-weight:700; color:#FFFFFF; font-family:'Outfit',sans-serif;">Contact Information</span>
             </div>
-            # <div style="width:48px; height:48px; border-radius:6px; border:1px solid rgba(255,255,255,0.1); background:#FFFFFF; display:flex; align-items:center; justify-content:center; position:absolute; top:18px; right:18px; overflow:hidden;">
-                # <img src="" style="width:75%; height:75%; object-fit:contain;" onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain={profile.get('website_name')}';" />
-            # </div>
         </div>
         <p style="margin: 6px 0; font-size:0.85rem; color:#94A3B8;"><strong>Entity Name</strong><br><span style="color:#F8FAFC;">{profile.get('company_name')}</span></p>
         <p style="margin: 10px 0; font-size:0.85rem; color:#94A3B8;"><strong>Corporate Address</strong><br><span style="color:#F8FAFC;">{profile.get('address') or '<span style="color:#64748B; font-style:italic;">Not Specified</span>'}</span></p>
