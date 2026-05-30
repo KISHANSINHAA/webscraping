@@ -12,27 +12,7 @@
     --success-green: #10B981;
 }
 
-#stDownloadButton {
-    background-color: #172033 !important;
-}
 
-#tabs-bui3-tab-1 {
-    background-color: #00050b !important;
-    color: #0266fb !important;
-    border: #0266fb !important;
-}
-
-#tabs-bui3-tab-0 {
-    background-color: #00060e !important;
-    color: #0266fb !important;
-    border: #0266fb !important;
-}
-
-#tabs-bui3-tab-2 {
-    background-color: #000610 !important;
-    color: #0266fb !important;
-    border: #0266fb !important;
-}
 
 /* App Canvas styling */
 .stApp {
@@ -310,24 +290,28 @@ div.stButton>button:hover {
     padding-top: 15px;
 }
 
-#stDownloadButton {
-    background-color: #172033 !important;
+/* Style all Tab buttons in the bar to have white text by default */
+div[data-testid="stTabBar"] button,
+div[data-testid="stTabBar"] button p,
+div[data-testid="stTabBar"] button span {
+    color: #FFFFFF !important;
 }
 
-#tabs-bui3-tab-1 {
-    background-color: #00050b !important;
-    color: #0266fb !important;
-    border: #0266fb !important;
-}
-
-#tabs-bui3-tab-0 {
+/* Active tab styling */
+div[data-testid="stTabBar"] button[aria-selected="true"] {
     background-color: #00060e !important;
-    color: #0266fb !important;
-    border: #0266fb !important;
+    border-bottom: 2px solid #0266fb !important;
 }
 
-#tabs-bui3-tab-2 {
-    background-color: #000610 !important;
-    color: #0266fb !important;
-    border: #0266fb !important;
+/* Base Download Button styling */
+div[data-testid="stDownloadButton"] button {
+    background-color: #172033 !important;
+    color: #F8FAFC !important;
+    border: 1px solid #2B3D5C !important;
+    border-radius: 6px !important;
+}
+
+div[data-testid="stDownloadButton"] button:hover {
+    background-color: #1E2B45 !important;
+    border-color: #3B82F6 !important;
 }
