@@ -14,14 +14,32 @@ def _load_env_file():
 _load_env_file()
 
 # ========= CONFIG =========
-# Groq API Key extracted safely from local environment
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+# Try to load secrets from Streamlit Secrets (for Streamlit Cloud deployment), else fallback to environment
+GROQ_API_KEY = None
+try:
+    import streamlit as st
+    if hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets:
+        GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+except Exception:
+    pass
+
+if not GROQ_API_KEY:
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Groq endpoint configuration
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-# Model choice extracted safely from local environment
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+# Model choice extracted safely from local environment/Streamlit secrets
+GROQ_MODEL = None
+try:
+    import streamlit as st
+    if hasattr(st, "secrets") and "GROQ_MODEL" in st.secrets:
+        GROQ_MODEL = st.secrets["GROQ_MODEL"]
+except Exception:
+    pass
+
+if not GROQ_MODEL:
+    GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 
 # Scraping & Discovery Settings
 TIMEOUT = 10

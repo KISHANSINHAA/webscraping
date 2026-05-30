@@ -28,6 +28,7 @@ MANIFEST
 
 # Streamlit local state
 .streamlit/
+.streamlit/secrets.toml
 
 # Local virtual environment
 .venv/
