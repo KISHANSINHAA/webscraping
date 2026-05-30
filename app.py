@@ -85,15 +85,15 @@ with tab1:
         with col_u1:
             url_1 = st.text_input(
                 "First Target Website URL *", 
-                value="https://zapier.com/", 
-                placeholder="https://zapier.com/", 
+                value="https://www.example1.com/", 
+                placeholder="https://www.example1.com/", 
                 help="Lookup the primary corporate website."
             )
         with col_u2:
             url_2 = st.text_input(
                 "Second Target Website URL (Optional)", 
-                value="https://www.dhl.com/in-en/home.html", 
-                placeholder="https://www.dhl.com/in-en/home.html", 
+                value="https://www.example2.com/", 
+                placeholder="https://www.example2.com/", 
                 help="Optional second corporate website to profile concurrently."
             )
             
