@@ -1,9 +1,0 @@
-# SECURE CREDENTIALS ENVELOPE (.enc)
-# This file serves as a secure backup structure for the engine.
-# Format: KEY=AES_256_BASE64_MOCK
-
-GROQ_API_KEY=ZW5jcnlwdGVkX2dza19QSDk4TVRIYUpRNVQ1akxsc1dJcVdHZHlicm94WTBmRDhHOHdHR0QyMmRzZzljbWRRdzNF
-GROQ_MODEL=bGxhbWEtMy4zLTcwYi12ZXJzYXRpbGU=
-DB_NAME=cHJvc3BlY3RzLmRi
-PORT=ODAwMA==
-HOST=MTI3LjAuMC4x
